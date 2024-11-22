@@ -1,0 +1,53 @@
+@use 'base/variables'as v;
+@use 'base/mixins'as m;
+
+.logo-inicio {
+    position: absolute;
+    top: 0;
+    right: 0;
+    .logotipo {
+        width: 150px;
+        margin: 25px 25px 0 0;
+    }
+}
+
+.bg-transparente {
+    background-color: rgba( v.$blanco, 1) !important;
+}
+
+.contenido-inicio {
+    h2 {
+        margin-top: 60px;
+        text-align: center;
+        color: v.$azul;
+    }
+    p {
+        margin: 0 auto 10px auto;
+        width: 80%;
+        span {
+            font-weight: bold;
+        }
+    }
+
+    .terminos {
+        margin: 2rem auto 2rem auto;
+        width: 80%;
+        label {
+            a {
+                color: v.$azul;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .enlace {
+        width: 260px;
+        margin: auto;
+        .boton {
+            width: 250px !important;
+            @include m.boton(v.$celeste-claro, v.$azul);
+        }
+    }
+}

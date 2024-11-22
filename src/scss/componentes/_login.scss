@@ -1,0 +1,20 @@
+@use 'base/variables'as v;
+@use 'base/mixins'as m;
+.contenedor {
+    .logotipo {
+        width: 300px;
+    }
+    form {
+        .campo {
+            input {
+                height: 30px !important;
+                width: 300px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .boton {
+            @include m.boton(v.$azul, v.$blanco);
+        }
+    }
+}

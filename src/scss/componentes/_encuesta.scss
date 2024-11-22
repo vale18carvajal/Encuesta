@@ -1,0 +1,247 @@
+@use 'base/variables'as v;
+@use 'base/mixins'as m;
+
+body {
+    background-image: url(../../build/img/Fondo_encuesta.svg);
+    backdrop-filter: blur(30px);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+i {
+    cursor: pointer;
+    width: auto;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    &:hover {
+        background-color: v.$celeste;
+        color: v.$blanco;
+    }
+}
+
+
+
+.contenido {
+    .mapa {
+        display: flex;
+        justify-content: center;
+        padding-top: 35px;
+        .img-mapa {
+            width: 30%;
+        }
+    }
+
+    display: absolute;
+    .indicacion {
+        color: v.$gris;
+        font-size: 1.5rem;
+    }
+    .botones {
+        margin: 70px auto 0 auto;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        .boton {
+            @include m.boton(v.$celeste, v.$blanco);
+            // width: 150px !important;
+            max-width: 300px !important;
+            &.provincia {
+                padding: 15px 25px !important;
+
+            }
+        }
+        .activo {
+            background-color: v.$celeste-claro !important;
+            color: v.$celeste;
+        }
+    }
+    .contenedor-persona {
+        width: 150px;
+        height: 260px;
+        margin: 15px auto;
+    }
+    .seccion {
+        width: 50%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        .select {
+            width: 100%;
+            display: inline-block;
+            appearance: none;
+            padding: 1.5rem 4rem;
+            background-color: v.$celeste;
+            color: v.$blanco;
+            border: none;
+            border-radius: 25px;
+            -webkit-border-radius: 25px;
+            -moz-border-radius: 25px;
+            -ms-border-radius: 25px;
+            -o-border-radius: 25px;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            margin: auto;
+            option {
+                background-color: v.$celeste-claro;
+                color: v.$negro;
+                font-family: v.$fuente_2;
+            }
+        }
+        
+    }
+    .dato-informativo {
+        // background-color: red;
+        width: 50%;
+        height: 100px;
+        position: absolute; /* Permite posicionarlo independientemente del flujo normal */
+        top: 50%; /* Posiciona el elemento a mitad de la altura de su contenedor */
+        left: 50%; /* Posiciona el elemento a mitad del ancho de su contenedor */
+        transform: translate(-50%, -50%); /* Ajusta la posición para centrar el elemento */
+        p {
+            margin: 0 !important;
+        }
+
+        .fuente {
+            margin-top: 80px !important;
+            a {
+                color: v.$celeste;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        .btnFinalizar {
+            @include m.boton(v.$celeste, v.$blanco);
+            margin-top: 25px !important;
+        }
+    }
+
+    .d-flex {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .img-signo {
+        width: 280px;
+    }
+    .soledad {
+        display: flex;
+        justify-content: center;
+        .familia {
+            width: 300px;
+        }
+    }
+
+    .contenedor-manos {
+        .manos {
+            width: 400px;
+        }
+    }
+    .opcionBtn6 {
+        width: auto !important;
+    }
+    .contenedor-corazon {
+        .corazon {
+            width: 600px;
+        }
+    }
+
+}
+
+
+.seccion-img-6{
+    margin: 35px auto 0 auto;
+    width: 200px;
+}
+
+.oculto {
+    display:none !important;
+}
+
+.container-final {
+    display: flex;
+    .resultado {
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 60%;
+        height: 100vh;
+        .intro, .mensaje-final{
+            text-align: center;
+            color: v.$blanco;
+        }
+    
+        .porcentaje {
+            font-weight: 800;
+            font-size: 17rem;
+            text-align: center;
+            margin: 0;
+            color: v.$blanco;
+        }
+    
+        .mensaje-final {
+            color: v.$blanco;
+        }
+    
+        .enlace-metricas {
+            text-align: center !important;
+            color: v.$celeste;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    
+        
+    }
+
+    .final {
+        background-color: rgba(v.$blanco, 0.4);
+        width: 40%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        padding: 45px 25px 25px 25px;
+
+        .logo-final {
+            margin: 0 auto 50px auto;
+            .logotipo {
+                width: 150px;
+            }
+        }
+        h4 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        p {
+            span {
+                font-weight: 500;
+            }
+        }
+
+        .botones {
+            .boton {
+                @include m.boton(v.$blanco, v.$negro);
+                margin: auto;
+                margin-bottom: 25px;
+            }
+            .contenedor-facebook {
+                margin: 50px auto 0 auto;
+                width: 50px;
+                .facebook {
+                    width: 50px;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+            
+        }
+    }
+}
